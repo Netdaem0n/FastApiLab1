@@ -1,0 +1,26 @@
+body {
+    background: darkblue;
+    color: white;
+    font-size: 1.5em;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button p a {
+    border:none;
+    background: black;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.button p a:hover{
+    background: white;
+    color: black;
+}

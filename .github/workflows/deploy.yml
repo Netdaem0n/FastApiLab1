@@ -1,0 +1,24 @@
+name: Create Report
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build docker img
+        run: |
+          docker stop flasklab2
+          docker build --no-cache -t flasklab2 .
+          docker image prune -f
+
+      - name: Run image
+        run: |
+          docker run -d -p 7000:7000 --restart always flasklab2:latest 

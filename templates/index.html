@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h1>Лабораторная работа</h1>
+<div class="button">
+    <p>Документация и примеры для API - <a href="/docs/">API Swagger</a> </p>
+    <p>Сбросить БД - <a href="/clear/">Очистить БД и заполнить данными</a> </p>
+</div>
+    <p>Краткая сводка по БД: </p>
+    <ul>
+        {% for el in data %}
+        <li>{{el}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

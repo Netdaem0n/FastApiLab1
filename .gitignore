@@ -1,0 +1,6 @@
+.venv
+.idea
+__pycache__
+*.pyc
+sports.db
+test_main.http
