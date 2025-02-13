@@ -20,6 +20,7 @@ jobs:
           fi
           docker build --no-cache -t flasklab2 .
           docker image prune -f
+          echo "DONE"
 
       - name: Run image
         run: |
