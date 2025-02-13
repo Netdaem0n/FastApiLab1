@@ -15,7 +15,9 @@ jobs:
 
       - name: Build docker img
         run: |
-          
+          if [ "$(docker ps -q -f name=flasklab2)" ]; then
+          docker stop flasklab2
+          fi
           docker build --no-cache -t flasklab2 .
           docker image prune -f
 
