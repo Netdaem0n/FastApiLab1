@@ -15,7 +15,7 @@ jobs:
 
       - name: Build docker img
         run: |
-          docker stop flasklab2
+          
           docker build --no-cache -t flasklab2 .
           docker image prune -f
 
